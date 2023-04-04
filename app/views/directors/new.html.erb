@@ -1,0 +1,24 @@
+<div class="mx-4">
+  <%= form_with model: @director do |form| %>
+    <div class="my-3">
+      <%= form.label :name , class:'form-label' %>
+      <%= form.text_field :name, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :nationality, class:'form-label' %>
+      <%= form.text_field :nationality, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :birthdate, class:'form-label' %>
+      <%= form.date_field :birthdate, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :favorite_genre, class:'form-label' %>
+      <%= form.text_field :favorite_genre, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
