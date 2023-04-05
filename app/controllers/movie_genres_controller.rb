@@ -9,11 +9,17 @@ class MovieGenresController < ApplicationController
   end
   
   def create
-    @movie_genre = MovieGenre.new(name: params[:movie_genre][:name])
+    @movie_genre = MovieGenre.new(movie_genre_params)
     if @movie_genre.save
       redirect_to @movie_genre and return
     end
     render 'new'
+  end
+
+  private
+
+  def movie_genre_params
+    params.require(:movie_genre).permit(:name)
   end
 
 end

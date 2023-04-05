@@ -12,12 +12,18 @@ class DirectorsController < ApplicationController
   end
   
   def create
-    @director = Director.new(name: params[:director][:name], nationality: params[:director][:nationality], birthdate: params[:director][:birthdate], favorite_genre: params[:director][:favorite_genre])
+    @director = Director.new(director_params)
     if @director.save
       redirect_to @director and return
     end
     render 'new'
-  end    
+  end
+  
+  private
+
+  def director_params
+    params.require(:director).permit(:name, :nationality, :birthdate, :favorite_genre)
+  end
 
 
 end
