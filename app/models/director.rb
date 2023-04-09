@@ -4,4 +4,5 @@ class Director < ApplicationRecord
   validates :birthdate, presence:true,  allow_blank: false
 
   belongs_to :favorite_genre, class_name: 'MovieGenre'
+  has_many :movies
 end
