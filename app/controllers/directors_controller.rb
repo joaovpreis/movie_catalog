@@ -1,6 +1,6 @@
 class DirectorsController < ApplicationController
   def index
-    render plain: "OK"
+    render plain: 'OK'
   end
 
   def new
@@ -10,20 +10,17 @@ class DirectorsController < ApplicationController
   def show
     @director = Director.find params[:id]
   end
-  
+
   def create
     @director = Director.new(director_params)
-    if @director.save
-      redirect_to @director and return
-    end
+    redirect_to @director and return if @director.save
+
     render 'new'
   end
-  
+
   private
 
   def director_params
-    params.require(:director).permit(:name, :nationality, :birthdate, :favorite_genre)
+    params.require(:director).permit(:name, :nationality, :birthdate, :favorite_genre_id)
   end
-
-
 end

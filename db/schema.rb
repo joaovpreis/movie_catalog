@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_05_112733) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_08_224021) do
   create_table "directors", force: :cascade do |t|
     t.string "name", null: false
     t.string "nationality", null: false
     t.date "birthdate", null: false
-    t.string "favorite_genre", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "favorite_genre_id", null: false
+    t.index ["favorite_genre_id"], name: "index_directors_on_favorite_genre_id"
   end
 
   create_table "movie_genres", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "directors", "movie_genres", column: "favorite_genre_id"
 end
