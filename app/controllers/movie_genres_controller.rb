@@ -1,7 +1,10 @@
 class MovieGenresController < ApplicationController
-
   def show
     @movie_genre = MovieGenre.find params[:id]
+  end
+
+  def index
+    @list_movie_genres = MovieGenre.all
   end
 
   def new
