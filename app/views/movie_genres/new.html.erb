@@ -1,8 +1,1 @@
-<div class="m-3">
-  <%= form_with model:@movie_genre do |form| %>
-    <div>
-      <%= form.label :name , class:'form-label' %>
-      <%= form.text_field :name, class:'form-control' %>
-    </div>
-  <% end %>
-</div>
+<%= render partial: 'movie_genres/form', locals: {movie_genre: @movie_genre} %>

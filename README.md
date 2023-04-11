@@ -5,8 +5,8 @@
 
 ### Project Goals
 
-- [ ] cadastrar e editar gêneros de filmes;
-- [ ] cadastrar e editar diretores;
+- [X] cadastrar e editar gêneros de filmes;
+- [X] cadastrar e editar diretores;
 - [ ] cadastrar e editar filmes;
 - [ ] ver uma listagem de todos os gêneros;
 - [ ] ao entrar na tela de detalhes de um gênero, - ver todos os filmes deste gênero;

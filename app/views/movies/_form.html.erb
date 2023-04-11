@@ -1,0 +1,35 @@
+<div class="mx-4">
+  <%= form_with model: movie do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, class:'form-label' %>
+      <%= form.text_field :title, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :release_year, class:'form-label' %>
+      <%= form.number_field :release_year, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :synopsis, class:'form-label' %>
+      <%= form.text_area :synopsis, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :country, class:'form-label' %>
+      <%= form.text_field :country, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :durations_in_minutes, class:'form-label' %>
+      <%= form.number_field :duration_in_minutes, class:'form-control' %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :director_id, class:'form-label' %>
+      <%= form.collection_select( :director_id, Director.all, :id, :name, prompt:true) %>
+    </div>
+    <div class="mb-3">
+      <%= form.label :movie_genre_id, class:'form-label' %>
+      <%= form.collection_select( :movie_genre_id, MovieGenre.all, :id, :name, prompt: true) %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit class:'btn btn-primary' %>
+    </div>
+  <% end %>
+<div>
