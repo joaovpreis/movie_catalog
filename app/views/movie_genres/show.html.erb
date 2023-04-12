@@ -2,4 +2,14 @@
   <div class="my-3">
     <%= @movie_genre.name %>
   </div>
+  <div class="my-3">
+    <h3>
+      Lista de Filmes
+    </h3>
+    <% @list_movies.each do |movie| %>
+      <div>
+        <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+      </div>
+    <% end %>
+  </div>
 </div>

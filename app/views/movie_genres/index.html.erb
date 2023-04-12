@@ -1,3 +1,3 @@
 <% @list_movie_genres.each do |movie_genre| %>
-  <h2><%= movie_genre.name %></h2>
+  <h2><%= link_to movie_genre.name, movie_genre %></h2>
 <% end %>
