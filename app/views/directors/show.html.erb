@@ -12,3 +12,14 @@
     <%= @director.favorite_genre.name%>
   </div>
 </div>
+
+<% if @list_movies.blank? %>
+  <div>Esse Diretor não dirigiu nenhum filme</div>
+<% else %>
+  <h3>Lista de Filmes</h3>
+  <% @list_movies.each do |movie| %>
+    <div>
+      <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+    </div>
+  <% end %>
+<% end %>

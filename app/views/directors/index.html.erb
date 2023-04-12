@@ -1,0 +1,12 @@
+<h2>Lista de Diretores</h2>
+<% if @list_directors.nil? %>
+  <div>
+    Nenhum Diretor Cadastrado
+  </div>
+<% else %>
+  <% @list_directors.each do |director| %>
+    <div>
+      <%= link_to director.name, director %>
+    </div>
+  <% end %>
+<% end %>

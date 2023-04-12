@@ -1,7 +1,7 @@
 class MovieGenresController < ApplicationController
   def show
     @movie_genre = MovieGenre.find params[:id]
-    @list_movies = Movie.where(movie_genre: @movie_genre.id) 
+    @list_movies = Movie.where(movie_genre_id: @movie_genre.id) 
   end
 
   def index
