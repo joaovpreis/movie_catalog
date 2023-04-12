@@ -5,14 +5,14 @@
 
 ### Project Goals
 
-- [X] cadastrar e editar gêneros de filmes;
-- [X] cadastrar e editar diretores;
-- [X] cadastrar e editar filmes;
-- [X] ver uma listagem de todos os gêneros;
-- [X] ao entrar na tela de detalhes de um gênero, - ver todos os filmes deste gênero;
-- [X] ver uma listagem de todos os diretores;
-- [ ] ao entrar na tela de detalhes de um(a) diretor(a), ver todos os filmes dirigidos por esta pessoa;
-- [ ] ver uma listagem com todos os filmes, exibindo somente o título e o ano de lançamento;
-- [ ] ao clicar em um filme da listagem, ver todos os detalhes deste filme.
+- [ ] Criar Header;
+- [ ] Criar Footer;
+- [ ] Separar filmes por lançamento;
+- [ ] Exibir tag de lançamento;
+- [ ] Permitir criação de filme rascunho e nao exibir eles na listagem de filmes;
+- [ ] Permitir Upload de imagem;
+- [ ] Estilizar listagem e detalhes diretores;
+- [ ] Estilizar listagem e detalhes generos de filmes;
+- [ ] Estilizar listagem e detalhes de filmes;
 
 

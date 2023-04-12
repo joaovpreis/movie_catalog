@@ -1,0 +1,5 @@
+ <% @list_movies.each do |movie| %>
+  <div>
+    <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+  </div>
+ <% end %>
