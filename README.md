@@ -5,8 +5,7 @@
 
 ### Project Goals
 
-- [ ] Criar Header;
-- [ ] Criar Footer;
+- [X] Criar Header;
 - [ ] Separar filmes por lançamento;
 - [ ] Exibir tag de lançamento;
 - [ ] Permitir criação de filme rascunho e nao exibir eles na listagem de filmes;

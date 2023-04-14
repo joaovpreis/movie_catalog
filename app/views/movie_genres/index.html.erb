@@ -1,3 +1,14 @@
-<% @list_movie_genres.each do |movie_genre| %>
-  <h2><%= link_to movie_genre.name, movie_genre %></h2>
+<%= render partial: 'shared/header' %>
+
+<h2>Lista de Gêneros de Filmes</h2>
+<% if @list_movie_genres.blank? %>
+  <div>
+    Nenhum Gênero de Filme Cadastrado
+  </div>
+<% else %>
+  <% @list_movie_genres.each do |movie_genre| %>
+    <div>
+      <%= link_to movie_genre.name, movie_genre %>
+    </div>
+  <% end %>
 <% end %>

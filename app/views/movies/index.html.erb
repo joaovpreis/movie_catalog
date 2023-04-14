@@ -1,5 +1,14 @@
- <% @list_movies.each do |movie| %>
+<%= render partial: 'shared/header' %>
+
+<h2>Lista de Filmes</h2>
+<% if @list_movies.blank? %>
   <div>
-    <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+    Nenhum Filmes Cadastrado
   </div>
- <% end %>
+<% else %>
+  <% @list_movies.each do |movie| %>
+    <div>
+      <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+    </div>
+  <% end %>
+<% end %>

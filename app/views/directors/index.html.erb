@@ -1,5 +1,7 @@
+<%= render partial: 'shared/header' %>
+
 <h2>Lista de Diretores</h2>
-<% if @list_directors.nil? %>
+<% if @list_directors.blank? %>
   <div>
     Nenhum Diretor Cadastrado
   </div>
