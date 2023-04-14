@@ -20,5 +20,12 @@
   <div class="my-3">
     <%= @movie.movie_genre.name %>
   </div>
+  <div class="my-3">
+    <% if @movie.released? %>
+      Lançado
+    <% else %>
+      Em breve
+    <% end %>
+  </div>
 </div>
    

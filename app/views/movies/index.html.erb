@@ -7,8 +7,9 @@
   </div>
 <% else %>
   <% @list_movies.each do |movie| %>
+    <% status = movie.released? ? "Lançado" : "Em Breve" %> 
     <div>
-      <%= link_to "#{movie.title} - #{movie.release_year}", movie %>
+      <%= link_to "#{movie.title} - #{movie.release_year}", movie %> <span><%= status %></span>
     </div>
   <% end %>
 <% end %>

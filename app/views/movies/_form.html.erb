@@ -29,6 +29,12 @@
       <%= form.collection_select( :movie_genre_id, MovieGenre.all, :id, :name, prompt: true) %>
     </div>
     <div class="mb-3">
+      <%= form.radio_button :status, "to_be_released" %>
+      <%= form.label :to_be_released, "To be released" %>
+      <%= form.radio_button :status, "released" %>
+      <%= form.label :released, "Released" %>
+    </div>
+    <div class="mb-3">
       <%= form.submit class:'btn btn-primary' %>
     </div>
   <% end %>
