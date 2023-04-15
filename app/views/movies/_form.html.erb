@@ -1,6 +1,12 @@
 <div class="mx-4">
   <%= form_with model: movie do |form| %>
     <div class="mb-3">
+      <%= form.radio_button :register_status, "draft" %>
+      <%= form.label :to_be_released, "Draft" %>
+      <%= form.radio_button :register_status, "working_version" %>
+      <%= form.label :working_version, "Working Version" %>
+    </div>
+    <div class="mb-3">
       <%= form.label :title, class:'form-label' %>
       <%= form.text_field :title, class:'form-control' %>
     </div>

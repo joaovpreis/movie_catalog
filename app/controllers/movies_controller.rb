@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @list_movies = Movie.all
-    
+    @list_movies = Movie.where.not(register_status: :draft)
   end
 
   def show
@@ -38,6 +37,6 @@ class MoviesController < ApplicationController
 
   def movies_params
     params.require(:movie).permit(:title, :release_year, :synopsis, :country,
-                                  :duration_in_minutes, :director_id, :movie_genre_id, :status)
+                                  :duration_in_minutes, :director_id, :movie_genre_id, :status, :register_status)
   end
 end
